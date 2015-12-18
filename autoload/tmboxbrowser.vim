@@ -93,21 +93,21 @@ fun! tmboxbrowser#TMBoxBrowse(...)
 endf
 
 fun! s:MarkRead(ids)
-    for id in a:ids
-        " TLogVAR id
-        let idi = index(b:tmboxbrowser_ignore, id)
-        " TLogVAR idi
-        if idi == -1
-            call add(b:tmboxbrowser_ignore, id)
-        else
-            call remove(b:tmboxbrowser_ignore, idi)
-        endif
-    endfor
-    " if !isdirectory(g:tmboxbrowser_datadir)
-    "     call mkdir(g:tmboxbrowser_datadir, 'p')
-    " endif
-    call writefile(b:tmboxbrowser_ignore, b:tmboxbrowser_data)
-    call s:SetInputListParams(0)
+"    for id in a:ids
+"        " TLogVAR id
+"        let idi = index(b:tmboxbrowser_ignore, id)
+"        " TLogVAR idi
+"        if idi == -1
+"            call add(b:tmboxbrowser_ignore, id)
+"        else
+"            call remove(b:tmboxbrowser_ignore, idi)
+"        endif
+"    endfor
+"    " if !isdirectory(g:tmboxbrowser_datadir)
+"    "     call mkdir(g:tmboxbrowser_datadir, 'p')
+"    " endif
+"    call writefile(b:tmboxbrowser_ignore, b:tmboxbrowser_data)
+"    call s:SetInputListParams(0)
 endf
 
 fun! s:SetInputListParams(setbuffer)
